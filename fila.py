@@ -1,17 +1,13 @@
-from collections import deque
 
-fila = deque()
-
-def adicionar_pedido(numero_pedido):
+def adicionar_pedido(fila, numero_pedido):
     fila.append(numero_pedido)
 
 
-def proximo_pedido():
+def proximo_pedido(fila):
     if len(fila) > 0:
-        return fila.popleft()
-
+        return fila.pop(0)
     return None
 
 
-def consultar_fila():
-    return list(fila)
+def consultar_fila(fila):
+    return fila

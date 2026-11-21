@@ -1,3 +1,6 @@
+from fila import adicionar_pedido
+from dicionario import adicionar_pedido as cadastrar_pedido
+
 print("\n=======================================")
 print("\n         CANTINA DIGITAL               ")
 print("\n    Peça Antes, Retire no Intervalo!   ")
@@ -90,16 +93,16 @@ def fazer_pedido(pedidos, fila, contador_pedidos):
 
     # Armazenando as informacoes
 
-    pedidos[numero_pedido] = {
-        "aluno": nome,
-        "lanche": lanche,
-        "bebida": bebida,
-        "status": "Aguardando preparacao"
-    }
+    cadastrar_pedido(pedidos, numero_pedido, {
+    "aluno": nome,
+    "lanche": lanche,
+    "bebida": bebida,
+    "status": "Aguardando preparacao"
+    })
 
     # Adicionando na fila
 
-    fila.append(numero_pedido)
+    adicionar_pedido(fila, numero_pedido)
 
     print("\n===== PEDIDO REALIZADO =====")
     print(f"Numero do pedido: {numero_pedido:03d}")
@@ -109,3 +112,20 @@ def fazer_pedido(pedidos, fila, contador_pedidos):
     print("Status: Aguardando preparacao")
 
     return contador_pedidos + 1
+
+
+pedidos = {}
+fila = []
+contador_pedidos = 1
+
+while True:
+    contador_pedidos = fazer_pedido(pedidos, fila, contador_pedidos)
+
+    continuar = input("\nDeseja cadastrar outro pedido? (s/n): ").lower()
+
+    if continuar != "s":
+        break
+
+print("\n===== RESUMO DOS PEDIDOS =====")
+print("Fila de pedidos:", fila)
+print("Pedidos cadastrados:", pedidos)
