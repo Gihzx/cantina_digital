@@ -164,10 +164,10 @@ Projeto desenvolvido por uma equipe de quatro integrantes, com divisão de respo
 
 | Integrante | Responsabilidade |
 |---|---|
-| Integrante 1 | Cadastro e cardápio |
-| Integrante 2 | Estruturas de dados |
-| Integrante 3 | Gerenciamento dos pedidos |
-| Integrante 4 | Integração e testes |
+| Fernanda Falcão | Cadastro e cardápio |
+| Hiago Kesser | Estruturas de dados |
+| Gisele Oliveira | Gerenciamento dos pedidos |
+| Maria Cecília | Integração e testes |
 
 Todos os integrantes participam do desenvolvimento e da compreensão geral do sistema.
 
@@ -180,8 +180,6 @@ Todos os integrantes participam do desenvolvimento e da compreensão geral do si
 **Linguagem:** Python
 
 **Interface:** Terminal/Console
-
-**Apresentação:** 27 de novembro de 2026
 
 ## 💡 Considerações finais
 
